@@ -139,10 +139,58 @@ export default function Home() {
               src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=1100&q=85"
               alt="刚洗护完成的狗狗"
             />
-            <div className="floating-note">
-              <strong>今日可约</strong>
-              <span>小型犬洗护 10:30 / 猫咪精洗 14:00 / 造型修剪 16:30</span>
-            </div>
+            <form className="quick-booking" aria-label="快速预约">
+              <div className="quick-booking-head">
+                <strong>快速预约</strong>
+                <span>留下基础信息，我们尽快联系确认。</span>
+              </div>
+              <div className="quick-form-grid">
+                <label>
+                  联系人
+                  <input type="text" placeholder="您的称呼" />
+                </label>
+                <label>
+                  手机号
+                  <input type="tel" placeholder="138 0000 0000" />
+                </label>
+              </div>
+              <label>
+                期望到店时间
+                <input type="text" placeholder="例如：周六下午 3 点" />
+              </label>
+              <div className="quick-form-grid">
+                <label>
+                  宠物类型
+                  <select defaultValue="">
+                    <option value="" disabled>
+                      请选择
+                    </option>
+                    <option>狗狗</option>
+                    <option>猫咪</option>
+                    <option>其他小宠</option>
+                  </select>
+                </label>
+                <label>
+                  服务项目
+                  <select defaultValue="">
+                    <option value="" disabled>
+                      请选择
+                    </option>
+                    <option>基础香氛洗护</option>
+                    <option>精致造型修剪</option>
+                    <option>猫咪舒缓精洗</option>
+                    <option>除结护理</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                备注
+                <textarea placeholder="宠物年龄、性格、皮肤敏感或其他需求" />
+              </label>
+              <button className="quick-submit" type="button">
+                提交预约信息
+              </button>
+            </form>
           </div>
         </section>
 
