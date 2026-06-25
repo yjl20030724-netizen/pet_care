@@ -1,4 +1,5 @@
 # Pet-care Project Notes
+我叫Lynn,对于Python, Java,对CSS一窍不通，网页样式需要用大白话解释。
 
 ## Project Overview
 
