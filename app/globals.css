@@ -456,19 +456,32 @@ section {
 }
 
 .testimonials {
+  overflow: hidden;
   background: var(--white);
 }
 
-.testimonial-grid {
-  display: grid;
+.testimonial-viewport {
+  overflow: hidden;
   max-width: 1180px;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
   margin: 0 auto;
+  padding: 2px 0 14px;
+  mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: testimonialWheel 34s linear infinite;
+}
+
+.testimonial-viewport:hover .testimonial-track {
+  animation-play-state: paused;
 }
 
 .testimonial-card {
   display: grid;
+  flex: 0 0 clamp(290px, 32vw, 380px);
   min-height: 230px;
   align-content: space-between;
   gap: 18px;
@@ -504,6 +517,16 @@ section {
 .testimonial-author span {
   color: var(--muted);
   font-size: 14px;
+}
+
+@keyframes testimonialWheel {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 9px));
+  }
 }
 
 .booking {
@@ -709,7 +732,6 @@ footer {
   }
 
   .service-grid,
-  .testimonial-grid,
   .contact-wrap {
     grid-template-columns: 1fr 1fr;
   }
@@ -720,6 +742,21 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .testimonial-viewport {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    mask-image: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .testimonial-track {
+    animation: none;
+  }
+
+  .testimonial-card {
+    scroll-snap-align: start;
+  }
+
   .gallery-track {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -746,7 +783,6 @@ footer {
 
   .stats,
   .service-grid,
-  .testimonial-grid,
   .why-grid,
   .form-row,
   .contact-wrap {
@@ -779,5 +815,14 @@ footer {
 
   .quick-form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonial-viewport {
+    width: calc(100vw - 36px);
+    mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+  }
+
+  .testimonial-card {
+    flex-basis: min(82vw, 330px);
   }
 }

@@ -67,7 +67,34 @@ const testimonials = [
     owner: "陈女士",
     pet: "可乐",
   },
+  {
+    comment: "店里没有刺鼻味道，等候区也很干净。小布第一次不发抖，回来一路都很放松。",
+    owner: "黄女士",
+    pet: "小布",
+  },
+  {
+    comment: "美容师会先确认皮肤和打结情况，不会硬梳。团子的耳后结处理得很细，价格也透明。",
+    owner: "许先生",
+    pet: "团子",
+  },
+  {
+    comment: "猫咪洗护过程有照片同步，能看到它状态很好。回家后毛顺了很多，香味很自然。",
+    owner: "沈小姐",
+    pet: "豆花",
+  },
+  {
+    comment: "之前在别处剪得不太顺，这次造型沟通很仔细，腿型和脸型都修得很清爽。",
+    owner: "罗先生",
+    pet: "摩卡",
+  },
+  {
+    comment: "高龄犬护理很温柔，中途会让它休息。洗完脚垫也修干净了，走路舒服很多。",
+    owner: "吴阿姨",
+    pet: "豆豆",
+  },
 ];
+
+const testimonialLoop = [...testimonials, ...testimonials];
 
 const gallery = [
   {
@@ -248,19 +275,21 @@ export default function Home() {
             <h2>客户评价</h2>
             <p>来自近期到店的主人反馈，记录毛孩子洗护后的真实体验。</p>
           </div>
-          <div className="testimonial-grid">
-            {testimonials.map((item) => (
-              <article className="testimonial-card" key={`${item.owner}-${item.pet}`}>
-                <div className="stars" aria-label="五星评价">
-                  ★★★★★
-                </div>
-                <p>“{item.comment}”</p>
-                <div className="testimonial-author">
-                  <strong>{item.owner}</strong>
-                  <span>{item.pet} 的主人</span>
-                </div>
-              </article>
-            ))}
+          <div className="testimonial-viewport">
+            <div className="testimonial-track">
+              {testimonialLoop.map((item, index) => (
+                <article className="testimonial-card" key={`${item.owner}-${item.pet}-${index}`}>
+                  <div className="stars" aria-label="五星评价">
+                    ★★★★★
+                  </div>
+                  <p>“{item.comment}”</p>
+                  <div className="testimonial-author">
+                    <strong>{item.owner}</strong>
+                    <span>{item.pet} 的主人</span>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
