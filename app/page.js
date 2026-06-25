@@ -299,7 +299,7 @@ export default function Home() {
               <p className="eyebrow">预约到店</p>
               <h2>告诉我们宠物情况，预留合适的护理时间。</h2>
               <p>
-                表单用于页面展示，不会真正提交数据。正式上线时可以接入电话、微信或后台预约系统。
+                可通过电话、微信或到店沟通预约，我们会根据宠物状态安排合适的护理时段。
               </p>
               <div className="hours">
                 <div>
@@ -315,60 +315,6 @@ export default function Home() {
                   <span>上海市静安区花园路 88 号</span>
                 </div>
               </div>
-            </div>
-            <div className="booking-panel">
-              <form>
-                <div className="form-row">
-                  <label>
-                    主人姓名
-                    <input type="text" placeholder="例如：林小姐" />
-                  </label>
-                  <label>
-                    联系电话
-                    <input type="tel" placeholder="138 0000 0000" />
-                  </label>
-                </div>
-                <div className="form-row">
-                  <label>
-                    宠物类型
-                    <select defaultValue="狗狗">
-                      <option>狗狗</option>
-                      <option>猫咪</option>
-                      <option>其他小宠</option>
-                    </select>
-                  </label>
-                  <label>
-                    预约服务
-                    <select defaultValue="基础香氛洗护">
-                      <option>基础香氛洗护</option>
-                      <option>精致造型修剪</option>
-                      <option>猫咪舒缓精洗</option>
-                      <option>除结护理</option>
-                    </select>
-                  </label>
-                </div>
-                <div className="form-row">
-                  <label>
-                    期望日期
-                    <input type="date" />
-                  </label>
-                  <label>
-                    期望时段
-                    <select defaultValue="上午">
-                      <option>上午</option>
-                      <option>下午</option>
-                      <option>晚上</option>
-                    </select>
-                  </label>
-                </div>
-                <label>
-                  宠物备注
-                  <textarea placeholder="例如：胆小、易打结、皮肤敏感、第一次洗护" />
-                </label>
-                <button className="submit-btn" type="button">
-                  发送预约信息
-                </button>
-              </form>
             </div>
           </div>
         </section>

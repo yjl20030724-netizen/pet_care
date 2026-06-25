@@ -536,13 +536,13 @@ section {
 .booking-wrap {
   display: grid;
   max-width: 1180px;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 24px;
+  grid-template-columns: 1fr;
   align-items: start;
   margin: 0 auto;
 }
 
 .booking-intro {
+  max-width: 720px;
   padding: 16px 0;
 }
 
