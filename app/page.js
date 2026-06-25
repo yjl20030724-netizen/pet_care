@@ -388,31 +388,41 @@ export default function Home() {
               建议提前预约，胆小或高龄宠物可备注护理习惯，我们会安排更安静的时段。
             </p>
           </div>
-          <div className="contact-wrap">
-            <article className="contact-card">
-              <h3>电话</h3>
-              <p>
-                021-8888 6620
-                <br />
-                工作时间内快速确认档期
-              </p>
-            </article>
-            <article className="contact-card">
-              <h3>微信</h3>
-              <p>
-                BubblePaws88
-                <br />
-                可发送宠物照片评估毛量
-              </p>
-            </article>
-            <article className="contact-card">
-              <h3>交通</h3>
-              <p>
-                地铁 2 号线花园路站 3 号口
-                <br />
-                门口可临停 15 分钟
-              </p>
-            </article>
+          <div className="contact-location">
+            <div className="contact-wrap">
+              <article className="contact-card">
+                <h3>电话</h3>
+                <p>
+                  021-8888 6620
+                  <br />
+                  工作时间内快速确认档期
+                </p>
+              </article>
+              <article className="contact-card">
+                <h3>微信</h3>
+                <p>
+                  BubblePaws88
+                  <br />
+                  可发送宠物照片评估毛量
+                </p>
+              </article>
+              <article className="contact-card">
+                <h3>交通</h3>
+                <p>
+                  地铁 2 号线花园路站 3 号口
+                  <br />
+                  门口可临停 15 分钟
+                </p>
+              </article>
+            </div>
+            <div className="store-map" aria-label="门店地图">
+              <iframe
+                title="门店地图"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=121.459%2C31.264%2C121.491%2C31.286&layer=mapnik&marker=31.275%2C121.475"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </section>
       </main>
