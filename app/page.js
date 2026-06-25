@@ -183,7 +183,7 @@ export default function Home() {
               </div>
               <label>
                 期望到店时间
-                <input type="text" defaultValue="2026年6月26日 09:30" />
+                <input type="text" placeholder="例如：周六下午 3 点" />
               </label>
               <div className="quick-form-grid">
                 <label>
